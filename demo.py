@@ -1,5 +1,7 @@
 import csv
 import numpy as np
+import matplotlib as mp
+mp.use('Agg')
 from sklearn.svm import SVR
 import matplotlib as mp
 mp.use('Agg')
@@ -18,7 +20,8 @@ def get_data(filename):
 		csvFileReader = csv.reader(csvfile)
 		next(csvFileReader)	# skipping column names
 		for row in csvFileReader:
-			dates.append(int(row[0].split('-')[0]))
+			#dates.append(int(row[0].split('-')[2]))
+			dates.append(int(row[0]))
 			prices.append(float(row[1]))
 	return
 
