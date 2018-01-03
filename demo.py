@@ -3,8 +3,6 @@ import numpy as np
 import matplotlib as mp
 mp.use('Agg')
 from sklearn.svm import SVR
-import matplotlib as mp
-mp.use('Agg')
 import matplotlib.pyplot as plt
 
 
@@ -47,7 +45,7 @@ def predict_price(dates, prices, x):
 
 	return svr_rbf.predict(x)[0], svr_lin.predict(x)[0], svr_poly.predict(x)[0]
 
-get_data('aapl.csv') # calling get_data method by passing the csv file to it
+get_data('cmbbank.csv') # calling get_data method by passing the csv file to it
 print "Dates- ", dates
 print "Prices- ", prices
 
