@@ -20,7 +20,7 @@ def get_data(filename):
 		for row in csvFileReader:
 			#dates.append(int(row[0].split('-')[2]))
 			dates.append(int(row[0]))
-			prices.append(float(row[1]))
+			prices.append(float(row[4]))
 	return
 
 def predict_price(dates, prices, x):
