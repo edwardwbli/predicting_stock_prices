@@ -44,7 +44,7 @@ def predict_price(dates, prices, x):
 	#return svr_rbf.predict(x)[0], svr_lin.predict(x)[0], svr_poly.predict(x)[0]
 	return svr_rbf.predict(x)[0]
 
-get_data('cont.csv') # calling get_data method by passing the csv file to it
+get_data('cmbbank.csv') # calling get_data method by passing the csv file to it
 print "Dates- ", dates
 print "Prices- ", prices
 nextdate = dates[0] + 1
