@@ -10,11 +10,7 @@ PORTFOLIOS = ['601939', '600036', '600016','601398','601988','000001']
 
 #PORTFOLIOS = ['601939']
 
-dates = []
-prices = []
-
 def get_data(code):
-	global dates, prices
 	dates = []
 	prices = []
 	stock_close_prices = ts.get_hist_data(stock)[0:31].loc[:, ['close']].sort_index(axis=0,ascending=True)
@@ -57,5 +53,5 @@ def write_predict_to_google_sheet():
 if __name__ == '__main__':
 
 	for stock in PORTFOLIOS:
-		get_data(stock)
+		dates, prices = get_data(stock)
 		predict_price(dates,prices,31,stock)
