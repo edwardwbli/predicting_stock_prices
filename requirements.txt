@@ -7,3 +7,8 @@ pytz==2016.7
 scikit-learn==0.18
 scipy==0.18.1
 six==1.10.0
+lxml==4.1.1
+tushare==1.1.1
+pandas==0.22.0
+beautifulsoup4==4.6.0
+bs4==0.0.1
