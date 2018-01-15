@@ -33,7 +33,7 @@ def predict_price(dates, prices, x,stock):
 	svr_rbf.fit(dates, prices) # fitting the data points in the models
 	
 	svr_poly.fit(dates, prices)
-        plt.clf() 
+	plt.clf()
 	plt.scatter(dates, prices, color= 'black') # plotting the initial datapoints 
 	plt.plot(dates, svr_rbf.predict(dates), color= 'red') # plotting the line made by the RBF kernel
 	
