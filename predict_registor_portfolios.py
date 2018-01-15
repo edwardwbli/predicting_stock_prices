@@ -26,7 +26,6 @@ def get_data(code):
 	return dates, prices
 
 def predict_price(dates, prices, x,stock):
-	
 	dates = np.reshape(dates,(len(dates), 1)) # converting to matrix of n X 1
 		
 	svr_poly = SVR(kernel= 'poly', C= 1e3, degree= 2)
@@ -34,7 +33,7 @@ def predict_price(dates, prices, x,stock):
 	svr_rbf.fit(dates, prices) # fitting the data points in the models
 	
 	svr_poly.fit(dates, prices)
-	
+        plt.clf() 
 	plt.scatter(dates, prices, color= 'black') # plotting the initial datapoints 
 	plt.plot(dates, svr_rbf.predict(dates), color= 'red') # plotting the line made by the RBF kernel
 	
